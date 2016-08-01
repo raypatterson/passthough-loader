@@ -1,0 +1,14 @@
+{
+  "name": "@raypatterson/passthough-loader",
+  "version": "0.0.0-1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^0.2.15"
+  }
+}
