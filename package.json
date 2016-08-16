@@ -1,14 +1,81 @@
 {
   "name": "@raypatterson/passthough-loader",
+  "description": "A webpack loader that passes though whatever it loads so you can operate on it.",
   "version": "0.0.0-1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
+  "author": {
+    "name": "Ray Patterson",
+    "email": "github.raypatterson@gmail.com"
   },
-  "author": "",
-  "license": "MIT",
+  "bugs": "https://github.com/raypatterson/passthrough-loader",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    },
+    "links": []
+  },
+  "contributors": [
+    {
+      "name": "Ray Patterson",
+      "email": "github.raypatterson@gmail.com"
+    }
+  ],
   "dependencies": {
     "loader-utils": "^0.2.15"
+  },
+  "devDependencies": {
+    "blue-tape": "^0.2.0",
+    "commitizen": "^2.8.1",
+    "cz-conventional-changelog": "^1.1.6",
+    "faucet": "0.0.1",
+    "fixpack": "^2.3.1",
+    "ghooks": "^1.2.1",
+    "json-loader": "^0.5.4",
+    "linkr": "^0.1.0",
+    "updtr": "^0.2.1",
+    "xo": "^0.16.0"
+  },
+  "engines": {
+    "node": ">=6.1.0",
+    "npm": ">=3.10.0"
+  },
+  "homepage": "https://github.com/raypatterson/passthrough-loader/",
+  "keywords": [
+    "loader",
+    "passthrough",
+    "webpack"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:raypatterson/passthrough-loader.git"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "link": "linkr",
+    "lint": "xo --fix",
+    "test": "npm run test:pass",
+    "test:fail": "exit 1",
+    "test:pass": "exit 0",
+    "upgrade": "updtr && fixpack"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "commonjs"
+    ],
+    "esnext": true,
+    "space": false,
+    "globals": [],
+    "rules": {
+      "padded-blocks": [
+        1,
+        "always"
+      ]
+    }
   }
 }

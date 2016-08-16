@@ -1,12 +1,12 @@
 'use strict';
 
-var parseQuery = require('loader-utils').parseQuery;
+const parseQuery = require('loader-utils').parseQuery;
 
 module.exports = function passthoughLoader(source) {
 
-  const config = getConfig(this.options, this.query);
+	const config = getConfig(this.options, parseQuery(this.query));
 
-  if (config.callback && typeof config.callback === 'function') {
+	if (config.callback && typeof config.callback === 'function') {
 
 		config.callback(source, this);
 
@@ -19,17 +19,19 @@ module.exports = function passthoughLoader(source) {
 };
 
 function getConfig(options, query) {
+
 	return options.passthoughLoader ||
-		options.passthough ||
-		options[query.config];
+    options.passthough ||
+    options[query.config];
+
 }
 
 function throwError(message) {
 
-  var err = new Error('passthough-loader\n' + message);
+	const err = new Error('passthough-loader\n' + message);
 
-  Error.captureStackTrace(err, module.exports);
+	Error.captureStackTrace(err, module.exports);
 
-  throw err;
+	throw err;
 
 }
