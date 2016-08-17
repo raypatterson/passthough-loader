@@ -57,6 +57,7 @@
   "scripts": {
     "commit": "git-cz",
     "link": "linkr",
+    "link:rm": "linkr remove && npm i",
     "lint": "xo --fix",
     "test": "npm run test:pass",
     "test:fail": "exit 1",
