@@ -1,5 +1,5 @@
 {
-  "name": "@raypatterson/passthough-loader",
+  "name": "passthough-loader",
   "description": "A webpack loader that passes though whatever it loads so you can operate on it.",
   "version": "0.0.0-1",
   "author": {
