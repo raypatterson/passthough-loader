@@ -2,7 +2,7 @@
 
 const parseQuery = require('loader-utils').parseQuery;
 
-module.exports = function passthoughLoader(source) {
+module.exports = function passthroughLoader(source) {
 
 	const config = getConfig(this.options, parseQuery(this.query));
 
@@ -20,15 +20,15 @@ module.exports = function passthoughLoader(source) {
 
 function getConfig(options, query) {
 
-	return options.passthoughLoader ||
-    options.passthough ||
+	return options.passthroughLoader ||
+    options.passthrough ||
     options[query.config];
 
 }
 
 function throwError(message) {
 
-	const err = new Error('passthough-loader\n' + message);
+	const err = new Error('passthrough-loader\n' + message);
 
 	Error.captureStackTrace(err, module.exports);
 
