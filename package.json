@@ -54,7 +54,7 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "lint": "eslint --fix",
+    "lint": "eslint --fix .",
     "test": "npm run test:pass",
     "test:fail": "exit 1",
     "test:pass": "exit 0",
