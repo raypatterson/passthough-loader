@@ -14,8 +14,7 @@
     "ghooks": {
       "pre-commit": "npm run lint",
       "pre-push": "npm run test"
-    },
-    "links": []
+    }
   },
   "contributors": [
     {
@@ -36,7 +35,6 @@
     "fixpack": "~2.3.1",
     "ghooks": "~2.0.0",
     "json-loader": "~0.5.4",
-    "linkr": "~0.1.0",
     "updtr": "~0.2.3"
   },
   "engines": {
@@ -56,9 +54,7 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "link": "linkr",
-    "link:rm": "linkr remove && npm i",
-    "lint": "xo --fix",
+    "lint": "eslint --fix",
     "test": "npm run test:pass",
     "test:fail": "exit 1",
     "test:pass": "exit 0",
